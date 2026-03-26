@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@tigrisdata/react": "^1.2.2",
-    "@tigrisdata/storage": "^2.15.5",
+    "@tigrisdata/storage": "^2.15.6",
     "next": "^16.1.6",
     "react": "^19",
     "react-dom": "^19"
