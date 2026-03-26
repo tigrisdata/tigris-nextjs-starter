@@ -30,11 +30,7 @@ export function FileUpload({ onUploadComplete }: FileUploadProps) {
           onUploadComplete();
         }}
         onUploadError={(_, error) => {
-          const message =
-            error.message.includes("Forbidden")
-              ? "Provided credentials do not have permission to upload files."
-              : `Upload failed: ${error.message}`;
-          setUploadError(message);
+          setUploadError(error.message ?? "Upload failed");
         }}
       />
     </div>
