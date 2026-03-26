@@ -11,17 +11,11 @@ export async function GET(request: NextRequest) {
 }
 
 export async function POST(request: NextRequest) {
-  try {
-    const body = await request.json();
-    const { data, error } = await handleClientUpload(body);
-    if (error) {
-      return NextResponse.json({ error: error.message }, { status: 500 });
-    }
-    return NextResponse.json({ data });
-  } catch (error) {
-    return NextResponse.json(
-      { error: error instanceof Error ? error.message : "Upload failed" },
-      { status: 500 }
-    );
+  const body = await request.json();
+  const { data, error } = await handleClientUpload(body);
+  if (error) {
+    const status = error.message.includes("Access Denied") ? 403 : 500;
+    return NextResponse.json({ error: error.message }, { status });
   }
+  return NextResponse.json({ data });
 }
