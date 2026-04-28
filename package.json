@@ -9,21 +9,21 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "@tigrisdata/react": "^1.2.2",
-    "@tigrisdata/storage": "^2.15.6",
-    "next": "^16.1.6",
+    "@tigrisdata/react": "^1.2.3",
+    "@tigrisdata/storage": "^3.2.1",
+    "next": "^16.2.4",
     "react": "^19",
     "react-dom": "^19"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4.2.0",
+    "@tailwindcss/postcss": "^4.2.4",
     "@types/node": "^25",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
     "postcss": "^8",
-    "tailwindcss": "^4.2.0",
+    "tailwindcss": "^4.2.4",
     "typescript": "^5"
   }
 }
